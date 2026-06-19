@@ -37,20 +37,21 @@ const Navbar = () => {
   };
 
   return (
-    <div className="nav-shell" data-testid="primary-nav">
-      <nav className="nav-pill">
+    <header className="site-header" data-testid="primary-nav">
+      <nav className="site-nav">
         {items.map((item) => (
           <button
             key={item.id}
             data-testid={`nav-link-${item.id}`}
             onClick={() => handleClick(item.id)}
-            className={`nav-link ${active === item.id ? "active" : ""}`}
+            className={`site-nav-link ${active === item.id ? "active" : ""}`}
           >
             {item.label}
           </button>
         ))}
       </nav>
-    </div>
+      <span className="site-header-line" aria-hidden />
+    </header>
   );
 };
 
