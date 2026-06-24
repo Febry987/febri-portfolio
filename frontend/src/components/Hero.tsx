@@ -79,7 +79,7 @@ const Hero = () => {
 
             {/* floating chips */}
             <div
-              className="float-chip float-slow absolute top-[15%] right-[5%] reveal r-3"
+              className="float-chip float-slow absolute top-[15%] right-[5%]"
               data-testid="float-methodology"
               style={{ zIndex: 20 }}
             >
@@ -96,7 +96,7 @@ const Hero = () => {
             </div>
 
             <div
-              className="float-chip float-slow-reverse absolute bottom-[12%] left-[5%] reveal r-4"
+              className="float-chip float-slow-reverse absolute bottom-[12%] left-[5%]"
               data-testid="float-focus"
               style={{ zIndex: 20 }}
             >

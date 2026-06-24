@@ -70,7 +70,7 @@ const Certifications = () => {
                           setSelectedCert(c);
                         }}
                       >
-                        View Cert
+                        Click to View Certificate
                         <ExternalLink size={14} />
                       </button>
                     </div>
