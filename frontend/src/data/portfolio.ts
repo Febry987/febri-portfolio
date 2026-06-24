@@ -63,7 +63,7 @@ export type WorkExperience = {
 export const profile = {
   name: "Febry",
   status: "AVAILABLE FOR PROJECTS",
-  roles: ["SCM Specialist", "Project Management", "Data Analyst"],
+  roles: [],
   bio:
     "I turn complex supply chain challenges into actionable strategies. By combining Supply Chain Management expertise with Data Analytics, I transform data into insights, optimize processes, and drive smarter business decisions.",
   quote: "Making supply chains surprisingly efficient.",

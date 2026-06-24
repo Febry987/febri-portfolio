@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
 
           <h1
-            className="display mt-5 text-[56px] sm:text-[72px] leading-[1.02] text-[var(--ink)]"
+            className="display mt-5 text-[50px] sm:text-[60px] leading-[1.02] text-[var(--ink)]"
             data-testid="hero-heading"
           >
             Hey, <span style={{ color: "#39AAD5" }}>Febry</span> here 👋
@@ -67,19 +67,19 @@ const Hero = () => {
 
         {/* Right portrait */}
         <div className="relative reveal r-2">
-          <div className="portrait-wrap h-[480px] lg:h-[580px] relative flex items-end justify-center">
+          <div className="portrait-wrap h-[520px] lg:h-[620px] relative flex items-end justify-center">
             <div className="portrait-blob" aria-hidden />
             <img
               src={profile.photo}
               alt="Portrait"
-              className="portrait-img max-h-full object-contain z-10 relative"
+              className="portrait-img max-h-full object-cover z-10 relative"
               data-testid="hero-portrait"
               style={{ maxWidth: "100%", width: "auto" }}
             />
 
             {/* floating chips */}
             <div
-              className="float-chip absolute top-[15%] right-[5%] reveal r-3"
+              className="float-chip float-slow absolute top-[15%] right-[5%] reveal r-3"
               data-testid="float-methodology"
               style={{ zIndex: 20 }}
             >
@@ -96,7 +96,7 @@ const Hero = () => {
             </div>
 
             <div
-              className="float-chip absolute bottom-[12%] left-[5%] reveal r-4"
+              className="float-chip float-slow-reverse absolute bottom-[12%] left-[5%] reveal r-4"
               data-testid="float-focus"
               style={{ zIndex: 20 }}
             >

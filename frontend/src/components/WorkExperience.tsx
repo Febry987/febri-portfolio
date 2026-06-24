@@ -56,19 +56,18 @@ const WorkExperience = () => {
 
   return (
     <section id="workexperience" className="max-w-7xl mx-auto px-6 py-16">
-      <div className="mb-3">
-        <span className="pill">
-          <span className="dot" />
-          Experience
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-8 h-[1px] bg-gradient-to-r from-transparent to-[#39AAD5]" />
+        <span className="text-[#39AAD5] font-bold tracking-[0.28em] text-[11px] uppercase">
+          Pengalaman
         </span>
-        <h2 className="display mt-4 text-5xl text-[var(--ink)]">Work Experience</h2>
-        <p className="mt-3 text-[var(--ink-soft)] text-[15px]">
-          The vertical timeline highlights work experience, relevant documentation, and a concise summary of roles and responsibilities.
-        </p>
       </div>
-      <div className="divider my-8" />
+      <h2 className="text-[40px] font-extrabold text-[var(--ink)]">Work Experience</h2>
+      <p className="mt-3 text-[15px] leading-7 text-[var(--ink-soft)]">
+        Timeline vertikal berisi pengalaman nyata, dokumentasi, dan ringkasan job description.
+      </p>
 
-      <div className="work-stepper" data-testid="workexperience-grid">
+      <div className="work-stepper mt-12" data-testid="workexperience-grid">
         {workExperiences.map((item, idx) => (
           <div
             key={item.id}
@@ -83,7 +82,7 @@ const WorkExperience = () => {
             <article className="card work-card group overflow-hidden">
               <div className="grid md:grid-cols-[1fr_2fr] gap-0">
                 {/* Image column */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden rounded-t-[22px] md:rounded-l-[22px] md:rounded-tr-none">
                   <div className="relative aspect-[4/3] h-full">
                     <img
                       src={item.coverImage}
@@ -91,57 +90,52 @@ const WorkExperience = () => {
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                       onError={handleImgError("https://images.unsplash.com/photo-1522071820081-009f0110c9f1?w=1400&q=80&auto=format&fit=crop")}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3 text-white">
-                      <div className="text-[10px] font-bold tracking-[0.24em] uppercase mb-2 opacity-80">
-                        STEP 0{idx + 1}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <div className="text-[11px] font-bold tracking-[0.24em] uppercase mb-2 opacity-90">
+                        {item.employmentType}
                       </div>
-                      <div className="text-lg font-extrabold leading-tight">
+                      <div className="text-xl font-extrabold leading-tight">
                         {item.location}
                       </div>
-                    </div>
-                    <div className="absolute top-3 left-3">
-                      <span className="work-tag">
-                        {item.employmentType}
-                      </span>
                     </div>
                   </div>
                 </div>
 
                 {/* Content column */}
-                <div className="p-5">
-                  <div className="flex flex-wrap items-center gap-3 text-[12px] text-[var(--ink-soft)]">
-                    <span className="flex items-center gap-1">
+                <div className="p-6">
+                  <div className="flex flex-wrap items-center gap-4 text-[12px] text-[var(--ink-soft)] mb-3">
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100/70 rounded-full border border-gray-200/50">
                       <CalendarDays size={14} />
                       {formatPeriod(item.start, item.end)}
                     </span>
-                    <span className="flex items-center gap-1">
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100/70 rounded-full border border-gray-200/50">
                       <MapPin size={14} />
-                      Onsite
+                      {item.employmentType}
                     </span>
                   </div>
 
-                  <h3 className="mt-3 text-[20px] font-extrabold tracking-tight text-[var(--ink)]">
+                  <h3 className="text-[22px] font-extrabold tracking-tight text-[var(--ink)] mb-1">
                     {item.role}
                   </h3>
-                  <div className="mt-1 text-[15px] font-semibold text-[var(--ink-soft)]">
+                  <div className="text-[15px] font-semibold text-[var(--ink-soft)] mb-4">
                     {item.company}
                   </div>
 
-                  <p className="mt-3 text-[14px] leading-relaxed text-[var(--ink-soft)]">
+                  <p className="text-[14px] leading-relaxed text-[var(--ink-soft)] mb-6">
                     {item.summary}
                   </p>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {item.tags.map((tag: string) => (
-                      <span key={tag} className="work-meta-pill">
+                      <span key={tag} className="work-tag">
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-                    <span className="text-[11px] text-gray-400 font-medium">
+                  <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <span className="text-[12px] text-gray-400 font-medium">
                       Detail pengalaman • {idx + 1}
                     </span>
                     <button
