@@ -7,8 +7,7 @@ const ConnectBar = () => {
     { label: "Email", href: profile.contact.email },
     { label: "Instagram", href: profile.contact.instagram },
     { label: "LinkedIn", href: profile.contact.linkedin },
-    { label: "GitHub", href: profile.contact.github },
-    { label: "GitLab", href: profile.contact.gitlab },
+    { label: "Youtube", href: profile.contact.youtube },
   ];
 
   return (
@@ -26,7 +25,7 @@ const ConnectBar = () => {
             Let's connect
           </div>
           <div className="text-[12px] text-[var(--ink-soft)] hidden sm:block">
-            I'm always open for friendly chats or new projects.
+            I'm always open for friendly chats or new collaboration.
           </div>
         </div>
       </div>
@@ -37,8 +36,7 @@ const ConnectBar = () => {
             href={l.href}
             target="_blank"
             rel="noreferrer"
-            className="connect-chip"
-            data-testid={`connect-${l.label.toLowerCase()}`}
+            className="connect-link"
           >
             {l.label}
           </a>

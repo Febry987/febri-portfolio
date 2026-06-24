@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Highlights from "@/components/Highlights";
-import Competitions from "@/components/Competitions";
-import Awards from "@/components/Awards";
+import WorkExperience from "@/components/WorkExperience";
 import Certifications from "@/components/Certifications";
+import Awards from "@/components/Awards";
 import Projects from "@/components/Projects";
 import ConnectBar from "@/components/ConnectBar";
 
@@ -14,9 +14,9 @@ const App = () => {
       <main className="relative z-10" style={{ paddingBottom: 140 }}>
         <Hero />
         <Highlights />
-        <Competitions />
-        <Awards />
+        <WorkExperience />
         <Certifications />
+        <Awards />
         <Projects />
       </main>
       <ConnectBar />

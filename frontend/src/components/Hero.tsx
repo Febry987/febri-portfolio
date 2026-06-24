@@ -27,31 +27,16 @@ const Hero = () => {
             className="display mt-5 text-[56px] sm:text-[72px] leading-[1.02] text-[var(--ink)]"
             data-testid="hero-heading"
           >
-            Hey,{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg,#10b981,#2563eb)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              {profile.name}
-            </span>{" "}
-            here <span className="wave">👋</span>
+            Hey, <span style={{ color: "#39AAD5" }}>Febry</span> here 👋
           </h1>
 
           <p className="mt-7 max-w-xl text-[15px] leading-[1.75] text-[var(--ink-soft)]">
-            I turn abstract ideas into actionable plans. As a Software
-            Engineering student, I combine technical logic with{" "}
-            <strong>Agile discipline</strong>—focusing on sprint planning, QA,
-            and requirement scoping. My goal? Organize the chaos, align the
-            team, and make sure we ship on time.
+            {profile.bio}
           </p>
 
           <div
             className="mt-8 pl-4 italic text-[var(--ink-soft)] text-[14px]"
-            style={{ borderLeft: "3px solid #10b981" }}
+            style={{ borderLeft: "3px solid #01C7D5" }}
           >
             "{profile.quote}"
           </div>
@@ -66,10 +51,11 @@ const Hero = () => {
                 const el = document.getElementById("projects");
                 if (el)
                   window.scrollTo({
-                    top: el.offsetTop - 80,
+                    top: el.offsetTop - 90,
                     behavior: "smooth",
                   });
               }}
+              style={{ background: "#014C85" }}
             >
               Let's Talk <ArrowRight size={16} />
             </a>
@@ -81,45 +67,48 @@ const Hero = () => {
 
         {/* Right portrait */}
         <div className="relative reveal r-2">
-          <div className="portrait-wrap h-[560px] lg:h-[640px] relative">
+          <div className="portrait-wrap h-[480px] lg:h-[580px] relative flex items-end justify-center">
             <div className="portrait-blob" aria-hidden />
             <img
               src={profile.photo}
               alt="Portrait"
-              className="portrait-img"
+              className="portrait-img max-h-full object-contain z-10 relative"
               data-testid="hero-portrait"
+              style={{ maxWidth: "100%", width: "auto" }}
             />
 
             {/* floating chips */}
             <div
-              className="float-chip absolute top-[15%] right-[6%] reveal r-3"
+              className="float-chip absolute top-[15%] right-[5%] reveal r-3"
               data-testid="float-methodology"
+              style={{ zIndex: 20 }}
             >
               <div
                 className="ico"
-                style={{ background: "rgba(16,185,129,0.12)", color: "#047857" }}
+                style={{ background: "rgba(1, 199, 213, 0.15)", color: "#014C85" }}
               >
                 <Columns3 size={18} />
               </div>
               <div>
-                <div className="label">METHODOLOGY</div>
-                <div className="value">Agile &amp; Scrum</div>
+                <div className="label" style={{ color: "#014C85" }}>METHODOLOGY</div>
+                <div className="value" style={{ color: "#014C85" }}>Six Sigma & Agile</div>
               </div>
             </div>
 
             <div
-              className="float-chip absolute bottom-[10%] left-[6%] reveal r-4"
+              className="float-chip absolute bottom-[12%] left-[5%] reveal r-4"
               data-testid="float-focus"
+              style={{ zIndex: 20 }}
             >
               <div
                 className="ico"
-                style={{ background: "rgba(37,99,235,0.12)", color: "#1d4ed8" }}
+                style={{ background: "rgba(57, 170, 213, 0.15)", color: "#014C85" }}
               >
                 <CircleCheck size={18} />
               </div>
               <div>
-                <div className="label">FOCUS</div>
-                <div className="value">QA &amp; Scoping</div>
+                <div className="label" style={{ color: "#014C85" }}>FOCUS</div>
+                <div className="value" style={{ color: "#014C85" }}>SCM & Data Analyst</div>
               </div>
             </div>
           </div>

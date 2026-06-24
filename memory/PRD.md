@@ -3,7 +3,7 @@
 ## Problem Statement
 "Build portfolio based on picture, using TypeScript" — recreate the personal
 portfolio shown in the user-supplied screenshots (5 screens: Hero, Highlights/
-Competitions, Awards & Certifications, and Projects Gallery) for Nino, a
+workexperience, Awards & Certifications, and Projects Gallery) for Febry, a
 software-engineering student working as PM · Software · Data Analyst.
 
 ## Architecture
@@ -25,7 +25,7 @@ frontend/src/
     ├── Navbar.tsx         # Floating pill nav with active-section sync
     ├── Hero.tsx           # Headline, photo & floating chips
     ├── Highlights.tsx     # "My Journey" stats card
-    ├── Competitions.tsx   # Image cards with category pill
+    ├── workexperience.tsx   # Image cards with category pill
     ├── Awards.tsx         # 3-up scholarship/award cards
     ├── Certifications.tsx # Accordion list
     ├── Projects.tsx       # Masonry gallery (3-col → 1-col)
@@ -37,7 +37,7 @@ frontend/src/
 - Hero: status pill, role line, gradient name, wave emoji, CTA buttons, two
   floating chips (Agile & Scrum, QA & Scoping) overlaid on portrait
 - Highlights card with 3 stat tiles (gradient numbers)
-- Competitions grid with image cards + category tag + organizer footer
+- workexperience grid with image cards + category tag + organizer footer
 - Awards & Scholarships 3-card grid with side accent bar
 - Certifications accordion (first item open by default)
 - Projects masonry gallery with image overlay + tag pills

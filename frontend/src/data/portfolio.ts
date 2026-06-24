@@ -1,11 +1,15 @@
-export type Competition = {
-  id: string;
-  title: string;
-  category: string;
-  organizer: string;
-  image: string;
-  role?: string;
-};
+import febryPhoto from "../img/febryfix.png";
+import scm1Photo1 from "../img/scm1.jpeg";
+import scm1Photo2 from "../img/scm2.png";
+import scm1Photo3 from "../img/scm3.png";
+import scm1Photo4 from "../img/scm4.jpeg";
+import scm1Photo5 from "../img/scm5.jpeg";
+import scm1Photo6 from "../img/scm6.jpeg";
+import scm2Photo1 from "../img/scm9.jpeg";
+import scm3Photo1 from "../img/scm10.jpg";
+import scm4Photo1 from "../img/scm12.jpeg";
+import certification1 from "../img/certif1.jpeg";
+import certification1Detail from "../img/certif1detail.jpg";
 
 export type Award = {
   id: string;
@@ -22,6 +26,8 @@ export type Certification = {
   provider: string;
   year: string;
   details: string;
+  coverImage: string;
+  image: string;
 };
 
 export type Project = {
@@ -32,22 +38,42 @@ export type Project = {
   description: string;
 };
 
+export type WorkExperienceDocument = {
+  id: string;
+  title: string;
+  image: string;
+};
+
+export type WorkExperience = {
+  id: string;
+  company: string;
+  role: string;
+  location: string;
+  employmentType: string;
+  start: string;
+  end: string;
+  coverImage: string;
+  summary: string;
+  tags: string[];
+  responsibilities: string[];
+  achievements: string[];
+  documents: WorkExperienceDocument[];
+};
+
 export const profile = {
-  name: "Nino",
+  name: "Febry",
   status: "AVAILABLE FOR PROJECTS",
-  roles: ["PM", "SOFTWARE", "DATA ANALYST"],
+  roles: ["SCM Specialist", "Project Management", "Data Analyst"],
   bio:
-    "I turn abstract ideas into actionable plans. As a Software Engineering student, I combine technical logic with Agile discipline—focusing on sprint planning, QA, and requirement scoping. My goal? Organize the chaos, align the team, and make sure we ship on time.",
-  quote: "Making project timelines surprisingly fun.",
-  photo:
-    "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=900&q=80&auto=format&fit=crop",
+    "I turn complex supply chain challenges into actionable strategies. By combining Supply Chain Management expertise with Data Analytics, I transform data into insights, optimize processes, and drive smarter business decisions.",
+  quote: "Making supply chains surprisingly efficient.",
+  photo: febryPhoto,
   cvUrl: "#cv",
   contact: {
-    email: "mailto:nino@example.com",
-    instagram: "https://instagram.com/",
-    linkedin: "https://linkedin.com/",
-    github: "https://github.com/",
-    gitlab: "https://gitlab.com/",
+    email: "mailto:febrimp12@gmail.com",
+    instagram: "https://instagram.com/febrympratama/",
+    linkedin: "https://linkedin.com/in/febrymahendrapratama/",
+    youtube: "https://youtube.com/@febrymahendrapratama1628",
   },
 };
 
@@ -57,38 +83,148 @@ export const highlights = [
   { id: "proj", icon: "folder", value: "10+", label: "PROJECTS", color: "teal" },
 ];
 
-export const competitions: Competition[] = [
+export const workExperiences: WorkExperience[] = [
   {
-    id: "c1",
-    title: "Universitas Brawijaya Hackathon",
-    category: "SOFTWARE DEVELOPMENT",
-    organizer: "Universitas Brawijaya",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop",
+    id: "we-coordinatorwarehouse",
+    company: "PT Tempopress Mining Indonesia",
+    role: "Coordinator Warehouse",
+    location: "Onsite – KFM Site",
+    employmentType: "Mining",
+    start: "2026-01",
+    end: "2026-06",
+    coverImage: scm1Photo4,
+    summary:
+      "Managed inbound and outbound material flow for site operations by coordinating deliveries, maintaining inventory accuracy, and validating documentation to support timely availability of critical materials.",
+    tags: ["Inventory Management System", "Logistic", "Vendor Coordination", "EHS Implementation"],
+    responsibilities: [
+      "Coordinated shipment schedules with vendors and site operational teams to align delivery timelines.",
+      "Reconciled Delivery Orders (DO) with physical goods received on-site to ensure document accuracy.",
+      "Monitored fast-moving inventory items and prepared priority material lists based on operational demand.",
+      "Provided daily updates on shipment status, delivery progress, and operational constraints affecting material flow.",
+      "Applied warehouse procedures and documentation standards in receiving and dispatch processes.",
+    ],
+    achievements: [
+      "Improved shipment tracking visibility through consistent daily reporting and monitoring practices.",
+      "Reduced delivery communication gaps by implementing structured confirmation procedures prior to unloading.",
+    ],
+    documents: [
+      { id: "doc-1", title: "Design and Reconstruction Warehouse", image: scm1Photo2 },
+      { id: "doc-2", title: "Reconstruction Warehouse New Layout", image: scm1Photo3 },
+      { id: "doc-3", title: "Inbound Outbound Process Relocation", image: scm1Photo1 },
+      { id: "doc-4", title: "Bungker Fueling Process From Vendor", image: scm1Photo5 },
+      { id: "doc-5", title: "Bungker Fueling Process From Vendor", image: scm1Photo6 },
+    ],
   },
   {
-    id: "c2",
-    title: "Universitas Siliwangi Data Cup",
-    category: "DATA SCIENCE",
-    organizer: "Universitas Siliwangi",
-    image:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80&auto=format&fit=crop",
+    id: "we-ldp",
+    company: "PT Tempopress International Delivery",
+    role: "Leadership Development Program (LDP)",
+    location: "Mobile - Site & Head Office",
+    employmentType: "Mining",
+    start: "2024-12",
+    end: "2025-12",
+    coverImage: scm2Photo1,
+    summary:
+      "Participated in the Leadership Development Program (LDP), focusing on transforming Supply Chain and Production (Nickel) processes into integrated digital solutions adopted as internal enterprise systems.",
+    tags: ["Research and System Development", "IT Infrastructure", "Supply Chain", "Production (Mining-Hauling-Barging)"],
+    responsibilities: [
+      "Completed cross-functional OJT across key business departments.",
+      "Analyzed Supply Chain and Production business processes. Translated business needs into system requirements.",
+      "Provided support for IT infrastructure operations, including installation, configuration, and maintenance of radio repeater systems, fingerprint attendance devices, and WiFi router networks, ensuring reliable connectivity and operational continuity onsite (MTL Site).",
+      "Developed and implemented the TID Enterprise System, integrating core modules including Human Resource Information System (HRIS), Warehouse Management System (WMS), and Health, Safety, and Environment (HSE) Management System.",
+    ],
+    achievements: [
+      "Acquired comprehensive knowledge of end-to-end Supply Chain and Production operations through cross-functional rotations and hands-on project assignments.",
+      "Strengthened leadership, analytical thinking, stakeholder management, and project management capabilities through participation in strategic digital transformation initiatives.",
+    ],
+    documents: [
+      { id: "doc-1", title: "Dokumentasi Dashboard", image: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=1400&q=80&auto=format&fit=crop" },
+      { id: "doc-2", title: "Dokumentasi Dataset & EDA", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1400&q=80&auto=format&fit=crop" },
+    ],
   },
   {
-    id: "c3",
-    title: "Gemastik Web Innovation",
-    category: "WEB DEVELOPMENT",
-    organizer: "Kemdikbud",
-    image:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&q=80&auto=format&fit=crop",
+    id: "we-scm",
+    company: "Henkel AG & Co. KGaA",
+    role: "Supply Chain Intern (IISMA Program)",
+    location: "Dusseldorf - Germany",
+    employmentType: "Adhesives & Consumer Goods",
+    start: "2024-06",
+    end: "2024-06",
+    coverImage: scm3Photo1,
+    summary:
+      "Supported supply chain activities for FMCG and adhesive products through inventory analysis, logistics coordination, and process improvement initiatives within a global manufacturing environment.",
+    tags: ["Scope", "Sprint Planning", "Stakeholder"],
+    responsibilities: [
+      "Supported cross-functional supply chain projects involving procurement, production, and logistics, helping identify process improvements that reduced reporting turnaround time by 20%.",
+      "Participated in process mapping and continuous improvement initiatives to understand end-to-end supply chain operations and identify operational bottlenecks.",
+      "Assisted in preparing inventory and supply chain reports for FMCG and adhesive product categories, improving data accuracy by 10% through regular data validation and updates.",
+    ],
+    achievements: [
+      "Gained practical exposure to supply chain operations in a multinational FMCG and adhesive manufacturing company.",
+      "Strengthened analytical and problem-solving skills through data analysis and cross-functional project assignments in an international environment.",
+    ],
+    documents: [
+      { id: "doc-1", title: "Dokumentasi Sprint Plan", image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1400&q=80&auto=format&fit=crop" },
+      { id: "doc-2", title: "Dokumentasi Presentasi", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=80&auto=format&fit=crop" },
+    ],
   },
   {
-    id: "c4",
-    title: "Product Management Sprint",
-    category: "PRODUCT MANAGEMENT",
-    organizer: "PMI Indonesia",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80&auto=format&fit=crop",
+    id: "we-business-analyst",
+    company: "Techbros GmbH (PT Technologi Digital Nusantara)",
+    role: "Business Analyst Intern (IISMA Program)",
+    location: "Dusseldorf - Germany",
+    employmentType: "Telecommunication & IoT",
+    start: "2022-10",
+    end: "2023-01",
+    coverImage: scm4Photo1,
+    summary:
+      "Latihan end-to-end: problem framing, breakdown scope, rencana sprint, dan sinkronisasi stakeholder. Fokus pada eksekusi terukur dan komunikasi progres yang jelas.",
+    tags: ["Scope", "Sprint Planning", "Stakeholder"],
+    responsibilities: [
+      "Menyusun user story, acceptance criteria, dan prioritas sprint.",
+      "Membuat timeline delivery dan risk register sederhana.",
+      "Mempresentasikan progress dan keputusan scope secara terstruktur.",
+    ],
+    achievements: [
+      "Meningkatkan kemampuan framing masalah dan menjembatani kebutuhan stakeholder.",
+      "Membiasakan ritme planning yang rapi untuk delivery yang lebih terprediksi.",
+    ],
+    documents: [
+      { id: "doc-1", title: "Dokumentasi Sprint Plan", image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1400&q=80&auto=format&fit=crop" },
+      { id: "doc-2", title: "Dokumentasi Presentasi", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=80&auto=format&fit=crop" },
+    ],
+  },
+];
+
+export const certifications: Certification[] = [
+  {
+    id: "cert1",
+    title: "The Best Graduate of Diploma 2022 of Telkom University",
+    provider: "Academic",
+    year: "2022",
+    details: "Recognized as the top graduate for exceptional academic performance and contributions.",
+    coverImage: certification1,
+    image: certification1Detail,
+  },
+  {
+    id: "cert2",
+    title: "Database Programming with SQL",
+    provider: "Oracle Academy",
+    year: "2023",
+    details:
+      "Designed and queried relational databases using SQL—covering joins, subqueries, normalization, and transactions.",
+    coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=1400&q=80&auto=format&fit=crop",
+  },
+  {
+    id: "cert3",
+    title: "Public Speaking Training",
+    provider: "Pegasus Speakers",
+    year: "2023",
+    details:
+      "Hands-on training in audience analysis, narrative structure, and live presentation delivery.",
+    coverImage: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1400&q=80&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=80&auto=format&fit=crop",
   },
 ];
 
@@ -119,33 +255,6 @@ export const awards: Award[] = [
     description:
       "Selected as a finalist among 25.000+ applicants, highlighting dedication to leadership and impact-driven work.",
     year: "2024",
-  },
-];
-
-export const certifications: Certification[] = [
-  {
-    id: "cert1",
-    title: "Huawei Certified ICT Associate – AI",
-    provider: "Huawei",
-    year: "2024",
-    details:
-      "Foundational concepts in Artificial Intelligence, machine learning algorithms, and Huawei's AI ecosystem (Ascend, MindSpore).",
-  },
-  {
-    id: "cert2",
-    title: "Database Programming with SQL",
-    provider: "Oracle Academy",
-    year: "2023",
-    details:
-      "Designed and queried relational databases using SQL—covering joins, subqueries, normalization, and transactions.",
-  },
-  {
-    id: "cert3",
-    title: "Public Speaking Training",
-    provider: "Pegasus Speakers",
-    year: "2023",
-    details:
-      "Hands-on training in audience analysis, narrative structure, and live presentation delivery.",
   },
 ];
 
